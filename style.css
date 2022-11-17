@@ -1,13 +1,49 @@
-.header {
-    padding: 60px;
-    text-align: center;
-    background: lightgray;
-    color: palevioletred;
-    font-size: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+h1,h2,h3,h4,p,a{
+    font-family: 'Playfair Display';
+    font-size: larger;
 }
-.logo{
-    max-width: 100%;
+/*////////////////////////////////////////////////////////HEADER//////////////////////////////////////////*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(226, 225, 225);
 }
 .header img{
-    max-width: 5%;
+    max-width: 100%;
 }
+.header a{
+    float: left;
+    color: palevioletred;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.header a:hover {
+    background-color: #ddd;
+}
+.icons img{
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header{
+      display: flex;
+      flex-direction: column;
+    }
+    .icons{
+        display: flex;
+    }
+    .icons img{
+        max-width: 50%;
+    }
+}  
