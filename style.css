@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
 
-h1,h2,h3,h4,p,a{
+h1,h2,h3,h4,p,a,.text{
     font-family: 'Playfair Display';
     font-size: larger;
+    text-align: center;
 }
+/* body{
+    background-color: rgb(255, 246, 246);
+} */
 /*////////////////////////////////////////////////////////HEADER//////////////////////////////////////////*/
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(226, 225, 225);
+    background: rgb(231, 229, 229);
 }
 .header img{
     max-width: 100%;
@@ -28,8 +32,63 @@ h1,h2,h3,h4,p,a{
 .icons img{
     padding: 0.5rem;
 }
+/* ////////////////////////////////////////////presentation banner/////////////////////////////////////////////// */
+.presentation{
+    margin-top: 1rem;
+    background-image: url('../ecommerce/img/background.jpg');
+    height: 20rem;
+}
+.text{
+    padding-top: 4rem;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    font-style:italic ;
 
-@media screen and (max-width: 800px) {
+}
+#exp{
+    display: block;
+    text-align: center;
+    width: 10rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    color: rgb(10, 97, 116);
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    border: 1px solid rgb(200, 235, 243);
+    text-decoration: none;
+    border-radius: 10px;
+}
+/* /////////////////////////////////////////////////pic galleries//////////////////////////////////////////////// */
+h1{
+    font-size: 3rem;
+}
+.pic{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.element{
+    background-color: rgb(245, 245, 245);
+    border-radius: 2rem;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.tn {
+
+    width: 15rem;
+
+}
+  /*image becomes thumbnail  */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/*//////////////////////////////////////////////////////////RESPONSIVE////////////////////////////////////////////*/
+@media screen and (max-width: 830px) {
     .header a {
       float: none;
       display: block;
@@ -45,5 +104,8 @@ h1,h2,h3,h4,p,a{
     }
     .icons img{
         max-width: 50%;
+    }
+    .presentation img{
+        max-width: 150%;
     }
 }  
