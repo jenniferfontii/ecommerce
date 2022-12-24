@@ -5,9 +5,7 @@ h1,h2,h3,h4,p,a,.text{
     font-size: larger;
     text-align: center;
 }
-/* body{
-    background-color: rgb(255, 246, 246);
-} */
+
 /*////////////////////////////////////////////////////////HEADER//////////////////////////////////////////*/
 .header {
     display: flex;
@@ -20,7 +18,7 @@ h1,h2,h3,h4,p,a,.text{
 }
 .header a{
     float: left;
-    color: palevioletred;
+    color: rgb(58, 56, 56);;
     text-align: center;
     font-weight: bolder;
     font-size: 2rem;
@@ -44,6 +42,7 @@ h1,h2,h3,h4,p,a,.text{
     font-weight: bolder;
     text-align: center;
     font-style:italic ;
+    color: rgb(58, 56, 56);
 
 }
 #exp{
@@ -52,10 +51,11 @@ h1,h2,h3,h4,p,a,.text{
     width: 10rem;
     margin: 1rem auto;
     padding: 1rem;
-    color: rgb(10, 97, 116);
+    color: rgb(1, 76, 93);
     text-transform: uppercase;
     font-family: 'Playfair Display';
-    border: 1px solid rgb(200, 235, 243);
+    font-size: 1rem;
+    border: 1px solid rgb(37, 56, 61);
     text-decoration: none;
     border-radius: 10px;
 }
@@ -70,8 +70,8 @@ h1{
     padding: 2rem;
 }
 .element{
-    background-color: rgb(245, 245, 245);
-    border-radius: 2rem;
+    background-color:rgba(248, 248, 248, 0.671);
+    border-radius: 1rem;
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -89,28 +89,38 @@ img:hover {
 .tech{
     background-color: rgb(58, 56, 56);
     display: grid;
+    grid-template-rows: 20% 80%;
     grid-template-columns: 50% 50%;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-.tech h1{
-    color: white;
+
+.media{
     grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.tech h1{
+    color: rgb(231, 229, 229);
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding-bottom: 4rem;
 }
 
 .video{
-    grid-column: 1 / 2;
-    width: 40rem;
-    height: 35rem;
-    padding-left: 5rem;
-    padding-bottom: 5rem;
-    position: absolute;
-  
+    width: 35rem;
+    height: 25rem;
+    text-align: center;
 }
 .tech p{
-    grid-column: 2 / -1;
-    color: white;
+    color: rgb(231, 229, 229);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     text-align: center;
+    text-justify: inter-word;
+    font-size: 1rem;
 }
 /* ////////////////////////////////////////////////////////////FOOTER//////////////////////////////////////////// */
 .footer{
@@ -131,7 +141,7 @@ img:hover {
     text-align: center;
 }
 .footer a,h1{
-    color: palevioletred;
+    color: rgb(58, 56, 56);;
     text-align: center;
 }
 .social{
@@ -141,6 +151,11 @@ img:hover {
 .social h1{
     grid-column: 1 / -1;
 }
+.social img{
+    text-align: center ;
+    width: 20%;
+}
+
 /*//////////////////////////////////////////////////////////RESPONSIVE////////////////////////////////////////////*/
 @media screen and (max-width: 830px) {
     .header a {
@@ -166,9 +181,10 @@ img:hover {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     .video{
-        width: 20rem;
+        width: 18rem;
         height: 15rem;
         padding-left: 1.8rem;
         padding-bottom: 1rem;
