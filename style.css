@@ -157,13 +157,15 @@ img:hover {
 }
 
 /*//////////////////////////////////////////////////////////RESPONSIVE////////////////////////////////////////////*/
+/* responsive layout, sets new dimensions and property when screen width < 830px */
 @media screen and (max-width: 830px) {
+
+    /* ////////////////header/////////////// */
     .header a {
       float: none;
       display: block;
       text-align: left;
     }
-    
     .header{
       display: flex;
       flex-direction: column;
@@ -174,9 +176,13 @@ img:hover {
     .icons img{
         max-width: 50%;
     }
+
+     /* ////////////////presentation, banner/////////////// */
     .presentation img{
         max-width: 150%;
     }
+
+     /* ////////////////vidoe and text/////////////// */
     .tech{
         display: flex;
         flex-direction: column;
@@ -192,6 +198,8 @@ img:hover {
     .tech p{
         padding: 1rem;
     }
+     
+    /* ////////////////footer/////////////// */
     .footer{
         display: flex;
         flex-direction: column;
