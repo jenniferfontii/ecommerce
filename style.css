@@ -27,8 +27,9 @@ h1,h2,h3,h4,p,a,.text{
 .header a:hover {
     background-color: #ddd;
 }
-.icons img{
+.social img{
     padding: 0.5rem;
+    width: 60%;
 }
 /* ////////////////////////////////////////////presentation banner/////////////////////////////////////////////// */
 .presentation{
@@ -85,7 +86,6 @@ h1{
 .tn {
     width: 15rem;
 }
-  /*image becomes thumbnail  */
 img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
