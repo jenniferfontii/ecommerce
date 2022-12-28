@@ -220,6 +220,13 @@ input, select{
     text-decoration: none;
     border-radius: 10px;
 }
+.clearfix button:hover{
+    background-color: rgb(171, 171, 171);
+}
+#signIn{
+    color: rgb(231, 229, 229);
+    font-size: 2rem;
+}
 
 /* ////////////////////////////////////////////////////////////FOOTER//////////////////////////////////////////// */
 .footer{
