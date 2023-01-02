@@ -1,11 +1,13 @@
 function loadPage(){
     if(localStorage.getItem("hsize") !== null || localStorage.getItem("hcolor") !== null){
+
         set_header();
     }
 
 }
 function set_header(){
     let header =  document.getElementById("header");
+    console.log(header)
     header.style.backgroundColor = localStorage.getItem('hcolor');
     
     if(localStorage.getItem("hsize") === null){
