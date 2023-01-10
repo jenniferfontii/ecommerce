@@ -19,6 +19,8 @@ function pageOnLoad(){
         document.getElementById('prod_title').innerHTML='FIAMMETTA GIANFANTI <br><i>'+title+'</i>';
         document.getElementById('prod_image').src='img/'+img;
         document.getElementById('prod_price').innerHTML='£'+price;
+    }else{
+        print_cart();
     }
     
     if(localStorage.getItem("hsize") !== null && localStorage.getItem("hcolor") !== null){
@@ -42,22 +44,33 @@ function set_header(){
     }
 }
 function add_cart(){
-    localStorage.setItem(img, price);
-    products[i] = img;
-    i++;
+    let element = new Array(img, price);
+    let n = localStorage.length +1;
+    localStorage.setItem(n, element);
+    products.push(img);
+    
 }
+
+
 function print_cart(){
-    ;
-    let c;
-    let Mystr ='';
-    for(c=0;c<i;c++){
-        Mystr = Mystr+'<img src=img/"'+products[i]+'" alt="prduct pic" id="image"><p>£ '+localStorage.getItem(products[i]);+'</p>'
-        
+    let Mystr ='<h1 id="hcart">YOUR CART</h1><br>';
+    let i;
+    let tot=0;
+    for(i=0; i<localStorage.length; i++){
+    
+        if(localStorage.key(i)!=='hcolor' && localStorage.key(i)!=='hsize'&&localStorage.key(i)!==null && localStorage.key(i)!=='email'&& localStorage.key(i)!=='name'){
+            let el = localStorage.getItem(localStorage.key(i));
+            el = el.split(',');
+            Mystr = Mystr.concat('<div class= "cart_el"><img src=img/'+el[0]+' alt="prduct pic" id="image"> <p>£ '+el[1]+'</p></div><br>');
+            tot = tot+parseInt(el[1]);
+        }
     }
+    console.log("THIS IS MY STRING"+Mystr);
     if(Mystr==''){
-        document.getElementById('cart').innerHTML('<p>the cart is empty. <a href="shop_all.html"> Shop All Here</a></p>');
+        document.getElementById('cart').innerHTML ='<p>the cart is empty. <a href="shop_all.html"> Shop All Here</a></p>';
     }else{
-        document.getElementById('cart').innerHTML(Mystr);
+        document.getElementById('cart').innerHTML = Mystr.concat('<p><i>your total £'+tot+'</i><p><button>CHECK OUT</button>');
+        document.getElementById('cart').innerHTML = Mystr.concat('<p><i>your total £'+tot+'</i><p><button>CHECK OUT</button>');
     }
     
 }

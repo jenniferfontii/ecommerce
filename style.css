@@ -235,6 +235,42 @@ input, select{
     font-size: 2rem;
     padding-bottom: 1rem ;
 }
+/* ////////////////////////////////////////////////////////////CART/////////////////////////////////////////// */
+.cart{
+    width: 70%;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: space-around;
+    color: rgb(231, 229, 229);
+    background-color: rgb(58, 56, 56);
+    flex-direction: column
+    ;
+
+}
+#hcart{
+    color: rgb(231, 229, 229);
+
+}
+.cart img{
+    max-width: 50%;
+    display: block;
+    margin: auto;
+    /* max-height: 20rem; */
+}
+.cart p{
+    text-align: center;
+}
+.cart button{
+    width: 80%;
+    color: rgb(46, 46, 46);
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    font-size: 2rem;
+    
+}
 /* ////////////////////////////////////////////////////////////Account/////////////////////////////////////////// */
 hr{
     width: 80%;
