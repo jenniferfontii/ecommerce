@@ -51,3 +51,7 @@ function set_header(){
         });
     }
 }
+function logout(){
+    localStorage.clear();
+    window.location.replace("../ecommerce/sign_in.html");
+}
