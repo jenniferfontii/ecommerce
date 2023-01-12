@@ -45,12 +45,28 @@ function set_header(){
 }
 function add_cart(){
     let element = new Array(title, img, price);
-    let n = localStorage.length +1;
-    localStorage.setItem(n, element);
-    products.push(img);
-    
+    if(alreadypresent(element)==false){
+        let n = localStorage.length +1;
+        localStorage.setItem(n, element);
+        products.push(img);
+    }else{
+        alert("item already present in your cart");
+    }    
 }
 
+function alreadypresent(elem){
+    let i;
+    for(i=0; i<localStorage.length; i++){
+        if(localStorage.key(i)!=='hcolor' && localStorage.key(i)!=='hsize'&&localStorage.key(i)!==null && localStorage.key(i)!=='email'&& localStorage.key(i)!=='name'){
+            let el = localStorage.getItem(localStorage.key(i));
+            el = el.split(',');
+            if(el[0]==elem[0]){
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
 function print_cart(){
     let Mystr ='<h1 id="hcart">YOUR CART</h1><br>';
