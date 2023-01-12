@@ -24,7 +24,6 @@ function get_values(){
 }
 
 function check_forms(name,surname,age,phone,email,psw,psw_repeat){
-    let ok = false;
     let nameRegex = /^[a-z][a-z '-.,]{0,31}$|^$/i;
     let pswRegex = /^[a-z][a-z '-.,]{0,31}$|^$/i;
     let emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
