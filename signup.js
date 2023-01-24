@@ -1,3 +1,4 @@
+// if clear button is pressed the value of each form just goes blank
 function clear_forms(){
     document.getElementById('name').value='';
     document.getElementById('surname').value='';
@@ -8,7 +9,7 @@ function clear_forms(){
     document.getElementById('psw-repeat').value='';
     console.log("chiamata clear")
 }
-
+// get the value of each form
 function get_values(){
     let name = document.getElementById('name').value;
     let surname =document.getElementById('surname').value;
@@ -22,13 +23,15 @@ function get_values(){
     return check_forms(name,surname,age,phone,email,psw,psw_repeat);
 
 }
-
+// check with regex that forms are correct
 function check_forms(name,surname,age,phone,email,psw,psw_repeat){
+    // regex
     let nameRegex = /^[a-z][a-z '-.,]{0,31}$|^$/i;
     let pswRegex = /^[a-z][a-z '-.,]{0,31}$|^$/i;
     let emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
     let phoneRegex = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/;
 
+    // test each value and if it's wrong gives alert and return
     if (nameRegex.test(name) == false){
         alert("insert a valid name");
         document.getElementById('name').focus();
@@ -63,6 +66,7 @@ function check_forms(name,surname,age,phone,email,psw,psw_repeat){
     }
 
 }
+// if the forms are all correct logs the user in and save his details for the local storage 
 function save_data(name,email){
     localStorage.setItem('name',name);
     localStorage.setItem('email',email);
